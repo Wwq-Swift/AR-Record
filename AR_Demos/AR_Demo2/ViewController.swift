@@ -13,13 +13,15 @@ import ARKit
 class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
-    let arSessionConfiguation: ARConfiguration?
+    var arSessionConfiguation: ARConfiguration?
     
     
     /// 三个星球节点
-    let sunNode: SCNNode?
-    let moonNode: SCNNode?
-    let earthNode: SCNNode?
+    private var sunNode: SCNNode?
+    private var moonNode: SCNNode?
+    private var earthNode: SCNNode?
+    
+    private var sonHaloNode: SCNNode?
     
     
     override func viewDidLoad() {
@@ -27,22 +29,15 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Set the view's delegate
         sceneView.delegate = self
-        
+        sceneView.automaticallyUpdatesLighting = true
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
         
-        // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
-        
-        // Set the scene to the view
-        sceneView.scene = scene
-        
-        createNode()
+        createNodes()
     }
     
-    private func createNode() {
+    private func createNodes() {
         sunNode = SCNNode()
-        earthNode = SCNNode()
         moonNode = SCNNode()
         
         sunNode?.geometry = SCNSphere(radius: 3)
@@ -60,14 +55,84 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sunNode?.geometry?.firstMaterial?.diffuse.wrapS = .repeat
         sunNode?.geometry?.firstMaterial?.multiply.wrapT = .repeat
         sunNode?.geometry?.firstMaterial?.diffuse.wrapT = .repeat
-        sceneView.scene.rootNode.addChildNode(sunNode)
+        sceneView.scene.rootNode.addChildNode(sunNode!)
 //        sceneView.scene.rootNode.a
+        addSunNodeAnimation()
+        addSunLight()
+        createEarthNode()
+        createMoonNode()
     }
     
-    private func addSunAnimation() {
-        let animation = CABasicAnimation(keyPath: "r")
+    private func createEarthNode() {
+        earthNode = SCNNode()
+        earthNode?.geometry = SCNSphere(radius: 1)
+        //    地球上圖
+        earthNode?.geometry?.firstMaterial?.diffuse.contents = "art.scnassets/earth-diffuse-mini.jpg"
+        //    地球夜光圖
+        earthNode?.geometry?.firstMaterial?.emission.contents = "art.scnassets/earth-emissive-mini.jpg"
+        earthNode?.geometry?.firstMaterial?.specular.contents = "art.scnassets/earth-specular-mini.jpg"
+        earthNode?.position = SCNVector3(10, 0, 0)
+        
+        //    太陽照到地球上的光層，還有反光度，地球的反光度
+        earthNode?.geometry?.firstMaterial?.shininess = 0.1 // 光澤
+        earthNode?.geometry?.firstMaterial?.specular.intensity = 0.5 // 反射多少光出去
+        
+        sunNode?.addChildNode(earthNode!)
+        addEarthAnimation()
+    }
+    
+    private func createMoonNode() {
+        moonNode = SCNNode()
+        moonNode?.geometry = SCNSphere(radius: 0.5)
+        //    地球上圖
+        moonNode?.geometry?.firstMaterial?.diffuse.contents = "art.scnassets/moon.jpg"
+        //    地球夜光圖
+        moonNode?.geometry?.firstMaterial?.emission.contents = "art.scnassets/earth-emissive-mini.jpg"
+        moonNode?.geometry?.firstMaterial?.specular.contents = "art.scnassets/earth-specular-mini.jpg"
+        moonNode?.position = SCNVector3(4, 0, 0)
+        earthNode?.addChildNode(moonNode!)
+
+    }
+    
+    private func addSunNodeAnimation() {
+        let animation = CABasicAnimation(keyPath: "rotation")
         animation.duration = 10
-        animation.fromValue = NSValue.va
+        animation.toValue = NSValue(scnVector4: SCNVector4(0, 1, 0, CGFloat.pi * 2))
+        animation.repeatCount = Float.greatestFiniteMagnitude
+        sunNode?.addAnimation(animation, forKey: "SunRotation")
+    }
+    
+    private func addEarthAnimation() {
+        let animation = CABasicAnimation(keyPath: "rotation")
+        animation.duration = 5
+        animation.toValue = NSValue(scnVector4: SCNVector4(0, 10, 0, CGFloat.pi * 2))
+        animation.repeatCount = Float.greatestFiniteMagnitude
+        earthNode?.addAnimation(animation, forKey: "earthRotation")
+    }
+    
+    private func addSunLight() {
+        let lightNode = SCNNode()
+        lightNode.light = SCNLight()
+        lightNode.light?.color = UIColor.red
+        
+        sunNode?.addChildNode(lightNode)
+        
+        lightNode.light?.attenuationEndDistance = 20
+        lightNode.light?.attenuationStartDistance = 1
+        
+        SCNTransaction.begin()
+        SCNTransaction.animationDuration = 1
+        SCNTransaction.commit()
+        
+        sonHaloNode = SCNNode()
+        sonHaloNode?.geometry = SCNPlane(width: 25, height: 25)
+        sonHaloNode?.rotation = SCNVector4(1, 0, 0, 0)
+//        _sunHaloNode.rotation = SCNVector4Make(1, 0, 0, 0 * M_PI / 180.0);
+        sonHaloNode?.geometry?.firstMaterial?.diffuse.contents = "art.scnassets/sun-halo.png"
+        sonHaloNode?.geometry?.firstMaterial?.lightingModel = .constant
+        sonHaloNode?.geometry?.firstMaterial?.writesToDepthBuffer = false
+        sonHaloNode?.opacity = 0.9
+        sunNode?.addChildNode(sonHaloNode!)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -76,10 +141,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         /// 全局追踪
         // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()
-
+//        configuration.isAutoFocusEnabled = true
         /// 自适应灯光(室内室外灯光环境切换)
-        arSessionConfiguation = configuration
-        arSessionConfiguation?.isLightEstimationEnabled = true
+//        arSessionConfiguation = configuration
+//        arSessionConfiguation?.isLightEstimationEnabled = true
         
         // Run the view's session
         sceneView.session.run(configuration)
