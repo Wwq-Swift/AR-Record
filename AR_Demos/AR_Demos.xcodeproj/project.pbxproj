@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C20B82AB21AD94AA00B7D650 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20B82AA21AD94AA00B7D650 /* AppDelegate.swift */; };
+		C20B82AD21AD94AA00B7D650 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20B82AC21AD94AA00B7D650 /* ViewController.swift */; };
+		C20B82B021AD94AA00B7D650 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20B82AE21AD94AA00B7D650 /* Main.storyboard */; };
+		C20B82B221AD94AC00B7D650 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C20B82B121AD94AC00B7D650 /* Assets.xcassets */; };
+		C20B82B521AD94AC00B7D650 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20B82B321AD94AC00B7D650 /* LaunchScreen.storyboard */; };
+		C20B82BB21AD94C700B7D650 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20B82BA21AD94C700B7D650 /* Line.swift */; };
+		C20B82BD21AD94E900B7D650 /* ARSCNView + Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20B82BC21AD94E900B7D650 /* ARSCNView + Extention.swift */; };
+		C20B82BF21AD94F900B7D650 /* SCNVector3 + Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20B82BE21AD94F900B7D650 /* SCNVector3 + Extention.swift */; };
 		C21D1D5821A5B16500AEEEDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21D1D5721A5B16500AEEEDF /* AppDelegate.swift */; };
 		C21D1D5A21A5B16500AEEEDF /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = C21D1D5921A5B16500AEEEDF /* art.scnassets */; };
 		C21D1D5C21A5B16500AEEEDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21D1D5B21A5B16500AEEEDF /* ViewController.swift */; };
@@ -57,6 +65,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C20B82A821AD94AA00B7D650 /* AR_Ruler_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AR_Ruler_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C20B82AA21AD94AA00B7D650 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C20B82AC21AD94AA00B7D650 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C20B82AF21AD94AA00B7D650 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C20B82B121AD94AC00B7D650 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C20B82B421AD94AC00B7D650 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C20B82B621AD94AC00B7D650 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C20B82BA21AD94C700B7D650 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		C20B82BC21AD94E900B7D650 /* ARSCNView + Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ARSCNView + Extention.swift"; sourceTree = "<group>"; };
+		C20B82BE21AD94F900B7D650 /* SCNVector3 + Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNVector3 + Extention.swift"; sourceTree = "<group>"; };
 		C21D1D5421A5B16500AEEEDF /* AR_Demos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AR_Demos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C21D1D5721A5B16500AEEEDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C21D1D5921A5B16500AEEEDF /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -88,6 +106,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C20B82A521AD94AA00B7D650 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C21D1D5121A5B16500AEEEDF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -133,6 +158,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C20B82A921AD94AA00B7D650 /* AR_Ruler_demo */ = {
+			isa = PBXGroup;
+			children = (
+				C20B82AA21AD94AA00B7D650 /* AppDelegate.swift */,
+				C20B82AC21AD94AA00B7D650 /* ViewController.swift */,
+				C20B82BA21AD94C700B7D650 /* Line.swift */,
+				C20B82BC21AD94E900B7D650 /* ARSCNView + Extention.swift */,
+				C20B82BE21AD94F900B7D650 /* SCNVector3 + Extention.swift */,
+				C20B82AE21AD94AA00B7D650 /* Main.storyboard */,
+				C20B82B121AD94AC00B7D650 /* Assets.xcassets */,
+				C20B82B321AD94AC00B7D650 /* LaunchScreen.storyboard */,
+				C20B82B621AD94AC00B7D650 /* Info.plist */,
+			);
+			path = AR_Ruler_demo;
+			sourceTree = "<group>";
+		};
 		C21D1D4B21A5B16500AEEEDF = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +183,7 @@
 				C21D1D8C21A5B1CF00AEEEDF /* AR_Demo2 */,
 				C21D1DA321A5B1D000AEEEDF /* AR_Demo2Tests */,
 				C21D1DAE21A5B1D000AEEEDF /* AR_Demo2UITests */,
+				C20B82A921AD94AA00B7D650 /* AR_Ruler_demo */,
 				C21D1D5521A5B16500AEEEDF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -155,6 +197,7 @@
 				C21D1D8B21A5B1CF00AEEEDF /* AR_Demo2.app */,
 				C21D1DA021A5B1D000AEEEDF /* AR_Demo2Tests.xctest */,
 				C21D1DAB21A5B1D000AEEEDF /* AR_Demo2UITests.xctest */,
+				C20B82A821AD94AA00B7D650 /* AR_Ruler_demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -226,6 +269,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C20B82A721AD94AA00B7D650 /* AR_Ruler_demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C20B82B921AD94AC00B7D650 /* Build configuration list for PBXNativeTarget "AR_Ruler_demo" */;
+			buildPhases = (
+				C20B82A421AD94AA00B7D650 /* Sources */,
+				C20B82A521AD94AA00B7D650 /* Frameworks */,
+				C20B82A621AD94AA00B7D650 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AR_Ruler_demo;
+			productName = AR_Ruler_demo;
+			productReference = C20B82A821AD94AA00B7D650 /* AR_Ruler_demo.app */;
+			productType = "com.apple.product-type.application";
+		};
 		C21D1D5321A5B16500AEEEDF /* AR_Demos */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C21D1D7E21A5B16600AEEEDF /* Build configuration list for PBXNativeTarget "AR_Demos" */;
@@ -342,6 +402,9 @@
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "王伟奇";
 				TargetAttributes = {
+					C20B82A721AD94AA00B7D650 = {
+						CreatedOnToolsVersion = 10.0;
+					};
 					C21D1D5321A5B16500AEEEDF = {
 						CreatedOnToolsVersion = 10.0;
 					};
@@ -385,11 +448,22 @@
 				C21D1D8A21A5B1CF00AEEEDF /* AR_Demo2 */,
 				C21D1D9F21A5B1D000AEEEDF /* AR_Demo2Tests */,
 				C21D1DAA21A5B1D000AEEEDF /* AR_Demo2UITests */,
+				C20B82A721AD94AA00B7D650 /* AR_Ruler_demo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C20B82A621AD94AA00B7D650 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C20B82B521AD94AC00B7D650 /* LaunchScreen.storyboard in Resources */,
+				C20B82B221AD94AC00B7D650 /* Assets.xcassets in Resources */,
+				C20B82B021AD94AA00B7D650 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C21D1D5221A5B16500AEEEDF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -443,6 +517,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C20B82A421AD94AA00B7D650 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C20B82BB21AD94C700B7D650 /* Line.swift in Sources */,
+				C20B82BD21AD94E900B7D650 /* ARSCNView + Extention.swift in Sources */,
+				C20B82AD21AD94AA00B7D650 /* ViewController.swift in Sources */,
+				C20B82BF21AD94F900B7D650 /* SCNVector3 + Extention.swift in Sources */,
+				C20B82AB21AD94AA00B7D650 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C21D1D5021A5B16500AEEEDF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -519,6 +605,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		C20B82AE21AD94AA00B7D650 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C20B82AF21AD94AA00B7D650 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C20B82B321AD94AC00B7D650 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C20B82B421AD94AC00B7D650 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		C21D1D5D21A5B16500AEEEDF /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -554,6 +656,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C20B82B721AD94AC00B7D650 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3TX76W4CSD;
+				INFOPLIST_FILE = AR_Ruler_demo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TextApp.AR-Ruler-demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C20B82B821AD94AC00B7D650 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3TX76W4CSD;
+				INFOPLIST_FILE = AR_Ruler_demo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TextApp.AR-Ruler-demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		C21D1D7C21A5B16600AEEEDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -907,6 +1045,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C20B82B921AD94AC00B7D650 /* Build configuration list for PBXNativeTarget "AR_Ruler_demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C20B82B721AD94AC00B7D650 /* Debug */,
+				C20B82B821AD94AC00B7D650 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C21D1D4F21A5B16500AEEEDF /* Build configuration list for PBXProject "AR_Demos" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
