@@ -66,6 +66,7 @@ class Line {
         startPointNode.position = startVector
         startPointNode.scale = SCNVector3(1/500.0,1/500.0,1/500.0)
         
+        
         endPointNode = SCNNode(geometry: dot)
         endPointNode.scale = SCNVector3(1/500.0,1/500.0,1/500.0)
         
@@ -86,7 +87,8 @@ class Line {
         
         let textStrNode = SCNNode(geometry: text)
         /// 使字体 面对着手机摄像头
-//        textStrNode.eulerAngles = SCNVector3Make(0, .pi, 0)
+        textStrNode.eulerAngles = SCNVector3Make(0, .pi, 0)
+        textStrNode.scale = SCNVector3(1/500.0,1/500.0,1/500.0)
         
         textNode.addChildNode(textStrNode)
         
@@ -105,6 +107,7 @@ class Line {
         lineNode?.removeFromParentNode()
         
         lineNode = SCNNode.createLine(fromVector: startVector, toVector: vector)
+//        lineNode?.scale = SCNVector3(1, 1, 1)
         sceneView.scene.rootNode.addChildNode(lineNode!)
         
         text.string = distanceStr(to: vector)

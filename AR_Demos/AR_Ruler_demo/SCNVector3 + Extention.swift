@@ -34,11 +34,13 @@ extension SCNVector3: Equatable {
 
 extension SCNNode {
     /// 根据两点 创建一个 线的节点
-    static func createLine(fromVector: SCNVector3, toVector: SCNVector3, lineColor: UIColor = UIColor.red) -> SCNNode {
+    static func createLine(fromVector: SCNVector3, toVector: SCNVector3, lineColor: UIColor = .white) -> SCNNode {
+        let indices: [UInt32] = [0,1]
         let source = SCNGeometrySource(vertices: [fromVector, toVector])
-        let element = SCNGeometryElement(indices: [0, 1], primitiveType: .line)
+        let element = SCNGeometryElement(indices: indices, primitiveType: .line)
         
         let geomtry = SCNGeometry(sources: [source], elements: [element])
+        geomtry.firstMaterial?.diffuse.contents = lineColor
         let node = SCNNode(geometry: geomtry)
         return node
     }
