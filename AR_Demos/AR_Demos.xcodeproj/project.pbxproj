@@ -31,6 +31,12 @@
 		C21D1D9A21A5B1D000AEEEDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C21D1D9821A5B1D000AEEEDF /* LaunchScreen.storyboard */; };
 		C21D1DA521A5B1D000AEEEDF /* AR_Demo2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21D1DA421A5B1D000AEEEDF /* AR_Demo2Tests.swift */; };
 		C21D1DB021A5B1D000AEEEDF /* AR_Demo2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21D1DAF21A5B1D000AEEEDF /* AR_Demo2UITests.swift */; };
+		C23B7CA621B81D13001CCEE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23B7CA521B81D13001CCEE2 /* AppDelegate.swift */; };
+		C23B7CA821B81D13001CCEE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23B7CA721B81D13001CCEE2 /* ViewController.swift */; };
+		C23B7CAB21B81D13001CCEE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C23B7CA921B81D13001CCEE2 /* Main.storyboard */; };
+		C23B7CAD21B81D16001CCEE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C23B7CAC21B81D16001CCEE2 /* Assets.xcassets */; };
+		C23B7CB021B81D16001CCEE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C23B7CAE21B81D16001CCEE2 /* LaunchScreen.storyboard */; };
+		C23B7CB621B81D92001CCEE2 /* BombScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23B7CB521B81D92001CCEE2 /* BombScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +109,14 @@
 		C21D1DAB21A5B1D000AEEEDF /* AR_Demo2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AR_Demo2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C21D1DAF21A5B1D000AEEEDF /* AR_Demo2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AR_Demo2UITests.swift; sourceTree = "<group>"; };
 		C21D1DB121A5B1D000AEEEDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C23B7CA321B81D13001CCEE2 /* ARGame_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARGame_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C23B7CA521B81D13001CCEE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C23B7CA721B81D13001CCEE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C23B7CAA21B81D13001CCEE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C23B7CAC21B81D16001CCEE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C23B7CAF21B81D16001CCEE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C23B7CB121B81D16001CCEE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C23B7CB521B81D92001CCEE2 /* BombScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BombScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +169,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C23B7CA021B81D13001CCEE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -184,6 +205,7 @@
 				C21D1DA321A5B1D000AEEEDF /* AR_Demo2Tests */,
 				C21D1DAE21A5B1D000AEEEDF /* AR_Demo2UITests */,
 				C20B82A921AD94AA00B7D650 /* AR_Ruler_demo */,
+				C23B7CA421B81D13001CCEE2 /* ARGame_demo */,
 				C21D1D5521A5B16500AEEEDF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -198,6 +220,7 @@
 				C21D1DA021A5B1D000AEEEDF /* AR_Demo2Tests.xctest */,
 				C21D1DAB21A5B1D000AEEEDF /* AR_Demo2UITests.xctest */,
 				C20B82A821AD94AA00B7D650 /* AR_Ruler_demo.app */,
+				C23B7CA321B81D13001CCEE2 /* ARGame_demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -264,6 +287,20 @@
 				C21D1DB121A5B1D000AEEEDF /* Info.plist */,
 			);
 			path = AR_Demo2UITests;
+			sourceTree = "<group>";
+		};
+		C23B7CA421B81D13001CCEE2 /* ARGame_demo */ = {
+			isa = PBXGroup;
+			children = (
+				C23B7CA521B81D13001CCEE2 /* AppDelegate.swift */,
+				C23B7CB521B81D92001CCEE2 /* BombScene.swift */,
+				C23B7CA721B81D13001CCEE2 /* ViewController.swift */,
+				C23B7CA921B81D13001CCEE2 /* Main.storyboard */,
+				C23B7CAC21B81D16001CCEE2 /* Assets.xcassets */,
+				C23B7CAE21B81D16001CCEE2 /* LaunchScreen.storyboard */,
+				C23B7CB121B81D16001CCEE2 /* Info.plist */,
+			);
+			path = ARGame_demo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,6 +429,23 @@
 			productReference = C21D1DAB21A5B1D000AEEEDF /* AR_Demo2UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		C23B7CA221B81D13001CCEE2 /* ARGame_demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C23B7CB421B81D16001CCEE2 /* Build configuration list for PBXNativeTarget "ARGame_demo" */;
+			buildPhases = (
+				C23B7C9F21B81D13001CCEE2 /* Sources */,
+				C23B7CA021B81D13001CCEE2 /* Frameworks */,
+				C23B7CA121B81D13001CCEE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ARGame_demo;
+			productName = ARGame_demo;
+			productReference = C23B7CA321B81D13001CCEE2 /* ARGame_demo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -427,6 +481,9 @@
 						CreatedOnToolsVersion = 10.0;
 						TestTargetID = C21D1D8A21A5B1CF00AEEEDF;
 					};
+					C23B7CA221B81D13001CCEE2 = {
+						CreatedOnToolsVersion = 10.0;
+					};
 				};
 			};
 			buildConfigurationList = C21D1D4F21A5B16500AEEEDF /* Build configuration list for PBXProject "AR_Demos" */;
@@ -449,6 +506,7 @@
 				C21D1D9F21A5B1D000AEEEDF /* AR_Demo2Tests */,
 				C21D1DAA21A5B1D000AEEEDF /* AR_Demo2UITests */,
 				C20B82A721AD94AA00B7D650 /* AR_Ruler_demo */,
+				C23B7CA221B81D13001CCEE2 /* ARGame_demo */,
 			);
 		};
 /* End PBXProject section */
@@ -514,6 +572,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C23B7CA121B81D13001CCEE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C23B7CB021B81D16001CCEE2 /* LaunchScreen.storyboard in Resources */,
+				C23B7CAD21B81D16001CCEE2 /* Assets.xcassets in Resources */,
+				C23B7CAB21B81D13001CCEE2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -576,6 +644,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C21D1DB021A5B1D000AEEEDF /* AR_Demo2UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C23B7C9F21B81D13001CCEE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C23B7CA821B81D13001CCEE2 /* ViewController.swift in Sources */,
+				C23B7CA621B81D13001CCEE2 /* AppDelegate.swift in Sources */,
+				C23B7CB621B81D92001CCEE2 /* BombScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,6 +727,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				C21D1D9921A5B1D000AEEEDF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C23B7CA921B81D13001CCEE2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C23B7CAA21B81D13001CCEE2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C23B7CAE21B81D16001CCEE2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C23B7CAF21B81D16001CCEE2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1042,6 +1136,42 @@
 			};
 			name = Release;
 		};
+		C23B7CB221B81D16001CCEE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3TX76W4CSD;
+				INFOPLIST_FILE = ARGame_demo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TextApp.ARGame-demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C23B7CB321B81D16001CCEE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3TX76W4CSD;
+				INFOPLIST_FILE = ARGame_demo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TextApp.ARGame-demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1113,6 +1243,15 @@
 			buildConfigurations = (
 				C21D1DB921A5B1D000AEEEDF /* Debug */,
 				C21D1DBA21A5B1D000AEEEDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C23B7CB421B81D16001CCEE2 /* Build configuration list for PBXNativeTarget "ARGame_demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C23B7CB221B81D16001CCEE2 /* Debug */,
+				C23B7CB321B81D16001CCEE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
